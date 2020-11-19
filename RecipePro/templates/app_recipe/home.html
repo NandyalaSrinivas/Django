@@ -1,0 +1,12 @@
+<center><h2> Recipe item list</h2></center>
+    <ul>
+    {% for item in Recipe_list %}
+        <li>
+            <a href="{{ itme.id }}">{{ item.recipe_name }}</a>
+            <a href="delete/{{item.id}}" id = '{{item.id}}'>delete</a>
+
+        </li>
+    {% endfor %}
+    </ul>
+<br>
+<a href="{% url 'creat' %}">Create item</a>

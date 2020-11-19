@@ -1,0 +1,7 @@
+<h1>Create Recipe item</h1>
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <br>
+    <a href="{% url 'home' %}"><input type="submit" value="submit"></a>
+</form>
