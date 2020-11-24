@@ -23,8 +23,8 @@ def create(request):
         else:
             return HttpResponse('data invalid')
     else:
-        form = RecipesForm()
-        return render (request,"app_recipe/creat.html" ,{'form': form})
+        obj_creat = RecipesForm()
+        return render (request,"app_recipe/creat.html" ,{'form': obj_creat})
 
 def delete(request, id):
     Recipe_list = get_object_or_404(Recipes, pk = id)
